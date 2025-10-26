@@ -31,7 +31,7 @@
       }
 
       h1 {
-        font-size: 2.2em !important; /* fixed reasonable size */
+        font-size: 2.2em !important;
         font-weight: 800 !important;
         text-align: center !important;
         line-height: 1.2 !important;
@@ -118,7 +118,7 @@
         color: #666;
       }
 
-      /* ===== Final Fix: Normalize Title Size ===== */
+      /* ===== Normalize Title Size ===== */
       h1 {
         font-size: 2.2em !important;
       }
@@ -131,11 +131,15 @@
         <small>Project 2</small>
         Persuasive or Deceptive Visualization?
       </h1>
-      <p style="text-align:center;"><strong>Boning Yang</strong> — <em>boyang@ucsd.edu</em></p>
+      <p style="text-align:center;">
+        <strong>Boning Yang</strong> — <em>boyang@ucsd.edu</em>
+      </p>
     </header>
 
     <main>
-      <h2>Proposition: The participation of women in higher education has improved worldwide significantly over the past decade.</h2>
+      <h2>
+        Proposition: The participation of women in higher education has improved worldwide significantly over the past decade.
+      </h2>
 
       <!-- ========================== -->
       <section>
@@ -143,29 +147,19 @@
 
         <figure>
           <img src="graph_1.png" alt="Female tertiary enrollment trend" />
-          <figcaption>Female tertiary enrollment has steadily increased worldwide since 2010.</figcaption>
+          <figcaption>
+            Female tertiary enrollment has steadily increased worldwide since 2010.
+          </figcaption>
         </figure>
 
         <p><strong>Design Decisions and Rationale:</strong></p>
         <ul>
-          <li>Upward-sloping line with blue-green gradient evokes sense of steady progress. <strong>(+1)</strong> – It is persuasive but not misleading.</li>
-          <li>Title wording “steadily” minimizes post-2019 decline. <strong>(–1)</strong> – It is slight rhetorical framing bias.</li>
-          <li>Full y-axis (0–55%) maintains proportional honesty. <strong>(+2)</strong> –It is completely earnest design.</li>
+          <li>Upward-sloping line with blue-green gradient evokes sense of steady progress. <strong>(+1)</strong> – Persuasive but not misleading.</li>
+          <li>Title wording “steadily” minimizes post-2019 decline. <strong>(–1)</strong> – Slight rhetorical framing bias.</li>
+          <li>Full y-axis (0–55%) maintains proportional honesty. <strong>(+2)</strong> – Transparent visualization.</li>
         </ul>
-        <p><strong>Data transformation:</strong> Aggregated  the world-level averages (2010–2020) from World Bank data; I also smoothed the annual noise for clarity.</p>
 
-        <figure>
-          <img src="graph_2.png" alt="Map of female tertiary enrollment" />
-          <figcaption>Most countries achieved over 50% female tertiary enrollment by 2020.</figcaption>
-        </figure>
-
-        <p><strong>Design Decisions and Rationale:</strong></p>
-        <ul>
-          <li>The use of blue-to-green shading is to emphasizes progress. <strong>(+1)</strong> – Positive framing.</li>
-          <li>The use of color scale could exaggerate green tones near 50%,which giving impression of universal success. <strong>(–1)</strong> – Slightly deceptive threshold effect.</li>
-          <li>I also added circle overlays to represent data magnitude. <strong>(+1)</strong> – Improves readability through dual encoding.</li>
-        </ul>
-        <p><strong>Data transformation:</strong> 2020 country-level female tertiary enrollment, grouped by region, circles scaled to enrollment percentage.</p>
+        <p><strong>Data transformation:</strong> Aggregated world-level averages (2010–2020) from World Bank data; smoothed annual noise for clarity.</p>
       </section>
 
       <!-- ========================== -->
@@ -173,62 +167,33 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="graph_3.png" alt="Gender gap instability" />
-          <figcaption>Gender parity in higher education remains unstable in developing countries.</figcaption>
-        </figure>
-
-        <p><strong>Design Decisions and Rationale:</strong></p>
-        <ul>
-          <li>The use of orange-red gradient and sharp oscillations is intended for amplifying volatility. <strong>(–1)</strong> – Emotional color palette.</li>
-          <li>It selected the developing regions only, which omitting higher-performing nations. <strong>(–1)</strong> – Data selection bias.</li>
-          <li>Maintained full axis to retain proportional accuracy. <strong>(+2)</strong> – Honest visualization choice.</li>
-        </ul>
-        <p><strong>Data transformation:</strong> Filtered dataset for Latin America, South Asia, and Sub-Saharan Africa, then computed mean gender gap over time.</p>
-
-        <figure>
           <img src="graph_4.png" alt="Developed vs developing comparison" />
-          <figcaption>Educational equality remains a privilege of wealthier nations.</figcaption>
+          <figcaption>
+            Educational equality remains a privilege of wealthier nations.
+          </figcaption>
         </figure>
 
         <p><strong>Design Decisions and Rationale:</strong></p>
         <ul>
-          <li>I truncated x-axis from 30 to 100%, which magnifies inequality gap. <strong>(–2)</strong> – Deliberate exaggeration for effect.</li>
-          <li>The use of red-green color contrast implies the moral judgment. <strong>(–1)</strong> – Emotionally charged framing.</li>
-          <li>Ordered bars by income group to emphasize inequality. <strong>(+1)</strong> – Persuasive but transparent.</li>
+          <li>Truncated x-axis from 30–100% magnifies inequality gap. <strong>(–2)</strong> – Deliberate exaggeration for rhetorical effect.</li>
+          <li>Red-green color contrast implies moral judgment. <strong>(–1)</strong> – Emotionally charged framing.</li>
+          <li>Ordered bars by income group to emphasize inequality. <strong>(+1)</strong> – Persuasive yet transparent ordering.</li>
         </ul>
-        <p><strong>Data transformation:</strong> Averaged female enrollment by World Bank income level; axis truncation applied intentionally for rhetorical contrast.</p>
+
+        <p><strong>Data transformation:</strong> Averaged female enrollment by World Bank income level; applied axis truncation to heighten visual contrast.</p>
       </section>
 
       <!-- ========================== -->
       <section>
         <h2>Final Reflection</h2>
         <p>
-            The visualizations on page one shows the proside of the claim. Visualization 1 shows that
-            female tertiary enrollment has increased steadily worldwide since 2010. This graph shows the
-            global trend line between 2010 and 2020 with a steady upward slope in female tertiary
-            enrollment. The blue-green gradient reinforces the sense of growth, and the deceptive
-            technique could be used for selective framing, which is the decline after 2019 is minimized
-            visually by color blending and title wording as “steadily”. The second visualization focuses on
-            most countries achieving over 50% female tertiary enrollment by 2020. This map has countries
-            shaded from blue (low) to green (high). In general, color green dominates the visual, which
-            emphasizes global success.The deceptive technique used here is color scaling. The map
-            exaggerates green hues even for moderate values (~50%), which creates an illusion of
-            universal achievement.
-
-            Second, the visualizations on page two shows the con side. The third visualization I created
-            shows that gender parity in higher education remains unstable in developing countries. I choose
-            to use a line chart of average gender gap over time for selected developing countries. The
-            orange-red gradient and sharp oscillations highlight volatility. The Deceptive technique used
-            here is utilization of color and scale emphasis to imply instability. Last but not least, the fourth
-            graph demonstrates that education equality remains a privilege of rich nations. I use a horizontal
-            bar chart to compare average female tertiary enrollment between developed versus the
-            developing countries.I truncated x-axis from 30 up to 100% and contrasting red/green to visually
-            magnify inequality. The deceptive technique used here axis truncation and emotionally charged
-            color palette to create a stronger sense of inequality.
-
-            From my own perspective, I lean toward the pro side. Although global averages hide large
-            inequalities, the data clearly show womens participation in higher education has increased
-            substantially in the past decade.
+          The “for” visualization presents the global upward trend in female tertiary enrollment between 2010 and 2020. Its blue-green gradient reinforces the sense of progress, though the title “steadily” and color blending slightly downplay the post-2019 decline. The full y-axis keeps proportional integrity.
+        </p>
+        <p>
+          The “against” visualization, by contrast, emphasizes inequality between developed and developing nations. Its truncated x-axis (30–100%) and red-green palette visually amplify disparity, using emotional framing to suggest that education equality is still a privilege of rich nations.
+        </p>
+        <p>
+          From my perspective, although global averages hide large inequalities, the data clearly show that women’s participation in higher education has increased substantially in the past decade. Thus, I lean toward the proposition while acknowledging the rhetorical power of design.
         </p>
       </section>
     </main>
